@@ -1,5 +1,7 @@
-- Bash
 - Unix
+- Bash
 - Git
+- HTML
+- CSS
 - JavaScrip
 - NodeJS
