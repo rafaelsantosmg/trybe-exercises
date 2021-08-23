@@ -1,0 +1,53 @@
+/* Estilos CSS */
+
+.color1 {color: #2d2047;}
+.color2 {color: #533449;}
+.color3 {color: #a28e88;}
+.color4 {color: #d8d2c5;}
+.color5 {color: #f5f4f2;}
+
+* {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #d8d2c5;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 30pt;
+  text-align: center;
+}
+
+h2 {
+  font-weight: 900;
+  font-size: 25pt;
+  text-align: center;
+}
+
+h3 {
+  font-weight: 900;
+  font-size: 20pt;
+  text-align: center;
+}
+
+.menu {
+  position: fixed;
+  padding: 15px;
+  background-color: #2d2047;
+  width: 100%;
+}
+
+.menu li {
+  margin-left: 50px;
+  display: inline-block;
+  color: #f5f4f2;
+}
+
+.header {
+  padding-top: 80px;
+  padding-bottom: 20px;
+}
+
