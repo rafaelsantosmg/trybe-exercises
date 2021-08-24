@@ -8,6 +8,8 @@
 
 * {
   margin: 0;
+  padding: 0;
+  border: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -32,32 +34,17 @@ h3 {
   font-weight: 900;
   font-size: 20pt;
   text-align: center;
-  margin: 25px;
-}
-
-img {
-  margin: 0px auto 30px auto;
-  width: 200px;
-  border: 2px solid #533449;
-  box-shadow: 3px 3px 5px #2d2047;
-}
-
-img:hover {
-  border-radius: 50%;
-  width: 50%;
-  transition: all 0.5s ease-in-out 0s;
-}
-
-p {
-  display: inline-block;
-  text-align: justify;
+  margin: 50px auto;
 }
 
 .menu {
   position: fixed;
-  padding: 15px;
-  background-color: #2d2047;
+  right: 0;
+  top: 0;
   width: 100%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  background-color: #2d2047;
 }
 
 .menu li {
@@ -66,9 +53,8 @@ p {
   color: #f5f4f2;
 }
 
-.header {
-  padding-top: 80px;
-  padding-bottom: 20px;
+.header h1 {
+  padding-top: 10%;
 }
 
 .main-content {
@@ -78,8 +64,106 @@ p {
   padding-bottom: 30px;
 }
 
+.table {
+  width: 80%;
+  margin: auto;
+  border: 2px double #2d2047;
+}
+
+.table td {
+  background-color: #533449;
+  color: #f5f4f2;
+  text-align: left;
+}
+
 .article {
   font-family: 'Times New Roman', Times, serif;
   font-size: 12pt;
   line-height: 20px;
+}
+
+.images {
+  display: inline-block;
+  width: 280px;
+  border: 2px solid #533449;
+  border-radius: 50%;
+  box-shadow: 3px 3px 5px #2d2047;
+}
+
+.images:hover {
+  border-radius: 5%;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+.facts {
+  text-align: center;
+}
+
+.facts p {
+  width: 50%;
+  display: inline-block;
+  text-indent: 15px;
+  text-align: justify;
+  margin: 10px;
+}
+
+.footer {
+  text-align: center;
+  padding: 10px;
+  margin: auto;
+  border-top: 2px dotted #2d2047;
+
+}
+
+@media (max-width:700px) {
+  .main-content {
+    width: 90%;
+    margin: auto;
+  }
+
+  h2 {
+    width: 80%;
+    padding: inherit;
+    margin: 30px auto;
+    text-align: center;
+    font-size: 35px;
+    line-height: 25pt;
+  }
+
+  h3 {
+    width: 80%;
+    font-size: 20pt;
+  }
+
+  .images {
+    display: inline-block;
+    width: 100%;
+    border: 2px solid #533449;
+    border-radius: 50%;
+    box-shadow: 3px 3px 5px #2d2047;
+  }
+  
+  .images:hover {
+    border-radius: 5%;
+    transition: all 0.5s ease-in-out 0s;
+  }
+  
+  .facts {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .facts p {
+    width: 100%;
+    display: inline-block;
+    text-indent: 15px;
+    text-align: justify;
+    font-size: 15pt;
+    line-height: 20pt;
+    margin: 20px auto;
+  }
+
+  .table {
+    width: 100%;
+  }
 }
