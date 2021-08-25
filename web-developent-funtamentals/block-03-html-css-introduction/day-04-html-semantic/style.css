@@ -84,7 +84,7 @@ h3 {
 
 .images {
   display: inline-block;
-  width: 280px;
+  width: 40%;
   border: 2px solid #533449;
   border-radius: 50%;
   box-shadow: 3px 3px 5px #2d2047;
@@ -99,12 +99,16 @@ h3 {
   text-align: center;
 }
 
-.facts p {
+.facts-content {
+
+}
+
+.facts-content p {
   width: 50%;
-  display: inline-block;
+  float: right;
   text-indent: 15px;
   text-align: justify;
-  margin: 10px;
+  margin: 20px auto;
 }
 
 .footer {
