@@ -8,3 +8,19 @@
   * valorCustoTotal = valorCusto + impostoSobreOCusto
   * lucro = valorVenda - valorCustoTotal (lucro de um produto) */
 
+const CUSTO = 80
+const VENDA = 20
+const IMPOSTO = 20
+
+if (CUSTO <= 0 || VENDA <= 0){
+  console.log("ERRO! Valor não Pode ser 0!")
+} else if (VENDA < CUSTO) {
+  console.log("ERRO! O Valor de Venda é menor que de Custo!")
+} else {
+  let valorCustoTotal = 85.00 + (85 / 100 * 20)
+  let lucro = VENDA - valorCustoTotal
+
+  lucro = lucro.toLocaleString('pt-BR', {minimumFractionDigits: 2, style: 'currency', currency: 'BRL'})
+
+  console.log(`O lucro do produto de custo ${CUSTO.toLocaleString('pt-BR', {minimumFractionDigits: 2, style: 'currency', currency: 'BRL'})} foi de ${lucro}`)
+}

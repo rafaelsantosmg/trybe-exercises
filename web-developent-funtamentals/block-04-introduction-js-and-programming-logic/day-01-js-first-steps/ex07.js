@@ -8,24 +8,23 @@ Porcentagem >= 50 -> E
 Porcentagem < 50 -> F */
 
 var nota = 50
-let porcentagem = 70
+let porcentagem = 40
 
 if (porcentagem >= 90) {
   porc = nota / 100 * porcentagem;
-  console.log(`O valor da nota é ${(nota).toLocaleString('pt-BR', { minimumFractionDigits: 2 })} e o valor dela com ${porcentagem} é ${(porc).toLocaleString('pt-BR', { minimumFractionDigits: 2 })}`);
 } else if (porcentagem >= 80) {
-  porc = nota / 100 * porcentagem;
-  console.log(`O valor da nota é ${(nota).toLocaleString('pt-BR', { minimumFractionDigits: 2 })} e o valor dela com $ é ${porcentagem} é ${(porc).toLocaleString('pt-BR', { minimumFractionDigits: 2 })}`);
+    porc = nota / 100 * porcentagem;
 } else if (porcentagem >= 70) {
-  porc = nota / 100 * porcentagem;
-  console.log(`O valor da nota é ${(nota).toLocaleString('pt-BR', { minimumFractionDigits: 2 })} e o valor dela com $ é ${porcentagem} é ${(porc).toLocaleString('pt-BR', { minimumFractionDigits: 2 })}`);
+    porc = nota / 100 * porcentagem;
 } else if (porcentagem >= 6.0) {
-  porc = nota / 100 * porcentagem;
-  console.log(`O valor da nota é ${(nota).toLocaleString('pt-BR', { minimumFractionDigits: 2 })} e o valor dela com $ é ${porcentagem} é ${(porc).toLocaleString('pt-BR', { minimumFractionDigits: 2 })}`);
+    porc = nota / 100 * porcentagem;
 } else if (porcentagem >= 50) {
-  porc = nota / 100 * porcentagem;
-  console.log(`O valor da nota é ${(nota).toLocaleString('pt-BR', { minimumFractionDigits: 2 })} e o valor dela com $ é ${porcentagem} é ${(porc).toLocaleString('pt-BR', { minimumFractionDigits: 2 })}`);
+    porc = nota / 100 * porcentagem;
 } else {
-  porc = nota / 100 * porcentagem;
-  console.log(`O valor da nota é ${(nota).toLocaleString('pt-BR', { minimumFractionDigits: 2 })} e o valor dela com $ é ${porcentagem} é ${(porc).toLocaleString('pt-BR', { minimumFractionDigits: 2 })}`);
+    porc = nota / 100 * porcentagem;  
 }
+
+nota = nota.toLocaleString('pt-BR', {minimumFractionDigits: 2, style: 'currency', currency: 'BRL'})
+porc = porc.toLocaleString('pt-BR', {minimumFractionDigits: 2, style: 'currency', currency: 'BRL'})
+
+console.log(`O valor da nota é ${nota} e o valor dela com ${porcentagem}% é ${porc}`);
