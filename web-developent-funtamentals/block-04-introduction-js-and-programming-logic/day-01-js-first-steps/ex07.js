@@ -7,24 +7,21 @@ Porcentagem >= 60 -> D
 Porcentagem >= 50 -> E
 Porcentagem < 50 -> F */
 
-var nota = 50
+var nota
 let porcentagem = 40
 
 if (porcentagem >= 90) {
-  porc = nota / 100 * porcentagem;
+  nota = "A"
 } else if (porcentagem >= 80) {
-    porc = nota / 100 * porcentagem;
+    nota = "B"
 } else if (porcentagem >= 70) {
-    porc = nota / 100 * porcentagem;
+    nota = "C"
 } else if (porcentagem >= 6.0) {
-    porc = nota / 100 * porcentagem;
+    nota = "D"
 } else if (porcentagem >= 50) {
-    porc = nota / 100 * porcentagem;
+    nota = "E"
 } else {
-    porc = nota / 100 * porcentagem;  
+    nota = "F"  
 }
 
-nota = nota.toLocaleString('pt-BR', {minimumFractionDigits: 2, style: 'currency', currency: 'BRL'})
-porc = porc.toLocaleString('pt-BR', {minimumFractionDigits: 2, style: 'currency', currency: 'BRL'})
-
-console.log(`O valor da nota é ${nota} e o valor dela com ${porcentagem}% é ${porc}`);
+console.log(`Você ficou com ${porcentagem}% e sua nota é "${nota}"`);
