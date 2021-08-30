@@ -6,15 +6,31 @@ Multiplicação (a * b)
 Divisão (a / b)
 Módulo (a % b) */
 
+
 let a = 10;
 let b = 7;
+let operador = '/'
 
-console.log(a + b, "\n");
+function operatorAritimetic(num1, num2, opr) {
+  let result;
+  switch (opr) {
+    case '+':
+      result = num1 + num2;
+      break;
+    case '-':
+      result = num1 - num2;
+      break;
+    case '*':
+      result = num1 * num2;
+      break;
+    case '/':
+      result = (num1 / num2).toFixed(2);
+      break;
+    default:
+      result = 'ERRO! Operador inválido!'
+      break;
+  }
+  return console.log(result);
+}
 
-console.log(a - b, "\n");
-
-console.log(a * b, "\n");
-
-console.log(a / b, "\n");
-
-console.log(a % b, "\n");
+operatorAritimetic(a, b, operador);
