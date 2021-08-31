@@ -7,21 +7,24 @@ Porcentagem >= 60 -> D
 Porcentagem >= 50 -> E
 Porcentagem < 50 -> F */
 
-var nota
+let nota
 let porcentagem = 40
 
-if (porcentagem >= 90) {
-  nota = "A"
-} else if (porcentagem >= 80) {
-    nota = "B"
-} else if (porcentagem >= 70) {
-    nota = "C"
-} else if (porcentagem >= 6.0) {
-    nota = "D"
-} else if (porcentagem >= 50) {
-    nota = "E"
-} else {
-    nota = "F"  
+function percentage(nota, porcentagem) {
+
+  if (porcentagem >= 90) {
+    nota = "A"
+  } else if (porcentagem >= 80) {
+      nota = "B"
+  } else if (porcentagem >= 70) {
+      nota = "C"
+  } else if (porcentagem >= 6.0) {
+      nota = "D"
+  } else if (porcentagem >= 50) {
+      nota = "E"
+  } else {
+      nota = "F"  
+  }
 }
 
 console.log(`Você ficou com ${porcentagem}% e sua nota é "${nota}"`);
