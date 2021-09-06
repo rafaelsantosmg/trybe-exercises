@@ -57,22 +57,30 @@
   </head>
   <body>
     <script>
-      // Adicione a tag h1 com o texto Exercício 5.2 - JavaScript DOM como filho da tag body.
+      // 1- Adicione a tag h1 com o texto Exercício 5.2 - JavaScript DOM como filho da tag body.
       let titleH1 = document.createElement('h1');
       titleH1.innerText = 'Exercício 5.2 - JavaScript DOM';
       document.body.appendChild(titleH1);
-      // Adicione a tag main com a classe main-content como filho da tag body.
+      // 2- Adicione a tag main com a classe main-content como filho da tag body.
       let main = document.createElement('main');
       main.className = 'main-content';
       document.body.appendChild(main);
-      // Adicione a tag section com a classe center-content como filho da tag main criada no passo 2.
-      let section = document.createElement('section');
-      section.className = 'center-content';
-      main.appendChild(section);
-      // Adicione a tag p como filho do section criado no passo 3 e coloque algum texto.
+      // 3- Adicione a tag section com a classe center-content como filho da tag main criada no passo 2.
+      let sectionCenter = document.createElement('section');
+      sectionCenter.className = 'center-content';
+      document.getElementsByClassName('main-content')[0].appendChild(sectionCenter);
+      // 4 -Adicione a tag p como filho do section criado no passo 3 e coloque algum texto.
       let paragraph = document.createElement('p');
       paragraph.innerText = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem necessitatibus, vitae officiis beatae aut molestias dolore molestiae deleniti, omnis natus accusantium facere autem porro consectetur? Rerum, non. Nihil, distinctio ex.';
-      section.appendChild(paragraph);
+      document.getElementsByClassName('center-content')[0].appendChild(paragraph);
+      // 5- Adicione a tag section com a classe left-content como filho da tag main criada no passo 2.
+      let sectionLeft = document.createElement('section');
+      sectionLeft.className = 'left-content';
+      document.getElementsByClassName('main-content')[0].appendChild(sectionLeft);
+      // Adicione a tag section com a classe right-content como filho da tag main criada no passo 2.
+      let sectionRight = document.createElement('section');
+      sectionRight.className = 'right-content';
+      document.getElementsByClassName('main-content')[0].appendChild(sectionRight);
       
     </script>
   </body>
