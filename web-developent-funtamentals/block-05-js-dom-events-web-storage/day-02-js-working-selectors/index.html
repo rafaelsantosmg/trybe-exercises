@@ -97,7 +97,11 @@
         document.getElementsByTagName('ol')[0].appendChild(lineList);
       }
       // 9- Adicione 3 tags h3 , todas sendo filhas do main criado no passo 2.
-      
+      let titleH3 = []
+      for (let i = 0; i < 3; i += 1) {
+        titleH3[i] = document.createElement('h3'); 
+        document.getElementsByTagName('main')[0].appendChild(titleH3[i]);
+      }
     </script>
   </body>
 </html>
