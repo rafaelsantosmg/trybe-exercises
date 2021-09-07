@@ -86,9 +86,18 @@
       image.src = 'https://picsum.photos/200';
       document.getElementsByClassName('left-content')[0].appendChild(image);
       // 8- Adicione uma lista não ordenada com os valores de 1 a 10 por extenso, ou seja, um , dois , três , ... como valores da lista. Essa lista deve ser filha do section criado no passo 6.
-      
+      let numberList = ['um', 'dois', 'três', 'quatro', 'cinco',
+                        'seis', 'sete', 'oito', 'nove', 'déz'];
+      let orderedList = document.createElement('ol');
+      document.getElementsByClassName('right-content')[0].appendChild(orderedList);
+      for (let i = 0; i < numberList.length; i += 1) {
+        let number = numberList[i];
+        let lineList = document.createElement('li');
+        lineList.innerText = number;
+        document.getElementsByTagName('ol')[0].appendChild(lineList);
+      }
       // 9- Adicione 3 tags h3 , todas sendo filhas do main criado no passo 2.
-
+      
     </script>
   </body>
 </html>
