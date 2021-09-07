@@ -110,7 +110,11 @@
       for (let i = 0; i < 3; i += 1) {
         document.getElementsByTagName('h3')[i].className = 'description';
       }
-      
+      // 2.3- Remova a section criado no passo 5 (aquele que possui a classe left-content ). Utilize a função .removeChild() ;
+      let removeTag = document.querySelectorAll('.main-content section');
+      for (let i = 0; i < removeTag.length; i += 1) {
+        document.querySelector('.main-content').removeChild(removeTag[1]);
+      }
     </script>
   </body>
 </html>
