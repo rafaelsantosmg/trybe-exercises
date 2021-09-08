@@ -16,8 +16,8 @@ createDaysOfTheWeek();
 // Exersise 1
 function createWeekDays() {
   const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
-  
-  let weekDays = document.querySelector('#days');
+
+  const weekDays = document.querySelector('#days');
 
   for (let index = 0; index < dezDaysList.length; index += 1) {
     const dayListItem = document.createElement('li');
@@ -50,7 +50,7 @@ createButtonHoliday('Feriados');
 
 // Exercise 3
 function changeColorHolidays() {
-  
+
   const holiday = document.querySelectorAll('.holiday');
   if (buttonHolidayOnOff === true) {
     for (index = 0; index < holiday.length; index += 1) {
@@ -58,16 +58,16 @@ function changeColorHolidays() {
     }
     buttonHolidayOnOff = false;
   } else {
-  for (index = 0; index < holiday.length; index += 1) {
-    holiday[index].style.backgroundColor = 'rgb(238,238,238)';
-    holiday[index].style.color = '#777';
+    for (index = 0; index < holiday.length; index += 1) {
+      holiday[index].style.backgroundColor = 'rgb(238,238,238)';
+      holiday[index].style.color = '#777';
     }
     buttonHolidayOnOff = true;
   }
 }
 
 let buttonHolidayOnOff = true;
-let buttonHoliday = document.querySelector('#btn-holiday');
+const buttonHoliday = document.querySelector('#btn-holiday');
 
 buttonHoliday.addEventListener('click', changeColorHolidays);
 
@@ -86,28 +86,27 @@ createButtonFriday('Sexta-feira');
 
 // Exercise 5
 function changeTextFriday() {
-  const fridays = [4, 11, 18 ,25];
+  const fridays = [4, 11, 18, 25];
   const friday = document.querySelectorAll('.friday');
-  if (buttonFridayOnOff === true) {
+  if (buttonFridayOnOff) {
     for (index = 0; index < friday.length; index += 1) {
       friday[index].innerHTML = 'Happy hour';
     }
     return buttonFridayOnOff = false;
-  } else {
+  }
   for (index = 0; index < fridays.length; index += 1) {
     friday[index].innerHTML = fridays[index];
-    }
-    return buttonFridayOnOff = true;
   }
+  return buttonFridayOnOff = true;
 }
 
 let buttonFridayOnOff = true;
-let buttonFriday = document.querySelector('#btn-friday');
+const buttonFriday = document.querySelector('#btn-friday');
 
 buttonFriday.addEventListener('click', changeTextFriday);
 
 // Exercise 6
-let listItens = document.querySelectorAll('.day');
+const listItens = document.querySelectorAll('.day');
 let textInDe = true;
 
 function increaseText(event) {
@@ -125,3 +124,13 @@ for (let index = 0; index < listItens.length; index += 1) {
   listItens[index].addEventListener('mouseenter', increaseText);
   listItens[index].addEventListener('mouseout', increaseText);
 }
+
+// Exercise 7
+function createMyTasks(string) {
+  const changeTasks = document.querySelector('.my-tasks');
+  let createTasks = document.createElement('span');
+  createTasks.innerText = string;
+  changeTasks.appendChild(createTasks);
+}
+
+createMyTasks('Programar');
