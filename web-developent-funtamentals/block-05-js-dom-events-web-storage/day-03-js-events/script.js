@@ -37,17 +37,17 @@ function createWeekDays() {
 createWeekDays();
 
 // exercise 2
-function createButtonHoliday() {
+function createButtonHoliday(string) {
   const button = document.querySelector('.buttons-container');
   const createButton = document.createElement('input');
   createButton.type = 'button';
-  createButton.value = 'Holidays';
+  createButton.value = string;
   createButton.id = 'btn-holiday';
 
   button.appendChild(createButton);
 }
 
-createButtonHoliday();
+createButtonHoliday('Feriados');
 
 // Exercise 3
 function changeColorHolidays() {
@@ -55,8 +55,7 @@ function changeColorHolidays() {
   const holiday = document.querySelectorAll('.holiday');
   if (buttonOnOff === true) {
     for (index = 0; index < holiday.length; index += 1) {
-      holiday[index].style.backgroundColor = 'green';
-      holiday[index].style.color = 'white';  
+      holiday[index].style.backgroundColor = 'white';
     }
     return buttonOnOff = false;
   } else {
@@ -72,3 +71,17 @@ let buttonOnOff = true;
 let buttonHoliday = document.querySelector('#btn-holiday');
 
 buttonHoliday.addEventListener('click', changeColorHolidays);
+
+// Exercise 4
+function createButtonFriday(string) {
+  const button = document.querySelector('.buttons-container');
+  const createButton = document.createElement('input');
+  createButton.type = 'button';
+  createButton.value = string;
+  createButton.id = 'btn-friday';
+
+  button.appendChild(createButton);
+}
+
+createButtonFriday('Sexta-feira');
+
