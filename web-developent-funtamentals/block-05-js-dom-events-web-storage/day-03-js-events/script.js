@@ -1,3 +1,5 @@
+let = colorDay = '';
+
 function createDaysOfTheWeek() {
   const weekDays = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado']
   const weekDaysList = document.querySelector('.week-days');
@@ -137,10 +139,11 @@ createMyTasks('Programar');
 
 // Exercise 8
 function createColorMyTasks(string) {
+  colorDay = string;
   const changeTasks = document.querySelector('.my-tasks');
   let createDiv = document.createElement('div');
   createDiv.classList.add('task');
-  createDiv.style.backgroundColor = string;
+  createDiv.style.backgroundColor = colorDay;
   changeTasks.appendChild(createDiv);
 }
 
@@ -161,3 +164,17 @@ function changeSelectMyTasks(event) {
 }
 
 changeSelectTasks.addEventListener('click', changeSelectMyTasks);
+
+// Exercise 10
+const colorItensDay = document.querySelectorAll('.day');
+
+function changeColorDays(event) {
+  if (document.querySelector('.my-tasks div').classList.contains('task-selected')) {
+    return event.target.style.color = colorDay;
+  }
+  return event.target.style.color = '#777';
+}
+
+for (let index = 0; index < colorItensDay.length; index += 1) {
+  colorItensDay[index].addEventListener('click', changeColorDays);
+}
