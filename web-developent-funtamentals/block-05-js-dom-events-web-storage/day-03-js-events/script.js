@@ -16,6 +16,8 @@ createDaysOfTheWeek();
 // Exersise 1
 function createWeekDays() {
   const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
+  const holiday = [24, 25, 31];
+  const friday = [4, 11, 18 ,21];
   let weekDays = document.querySelector('#days');
 
   for (let index = 0; index < dezDaysList.length; index += 1) {
@@ -33,3 +35,17 @@ function createWeekDays() {
 }
 
 createWeekDays();
+
+// exercise 2
+function createButtonHoliday() {
+  let button = document.querySelector('.buttons-container');
+  let createButton = document.createElement('input');
+  createButton.type = 'button';
+  createButton.value = 'Holidays';
+  createButton.id = 'btn-holiday';
+
+  button.appendChild(createButton);
+}
+
+createButtonHoliday();
+
