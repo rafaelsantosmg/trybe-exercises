@@ -56,13 +56,13 @@ function changeColorHolidays() {
     for (index = 0; index < holiday.length; index += 1) {
       holiday[index].style.backgroundColor = 'white';
     }
-    return buttonHolidayOnOff = false;
+    buttonHolidayOnOff = false;
   } else {
   for (index = 0; index < holiday.length; index += 1) {
     holiday[index].style.backgroundColor = 'rgb(238,238,238)';
     holiday[index].style.color = '#777';
     }
-    return buttonHolidayOnOff = true;
+    buttonHolidayOnOff = true;
   }
 }
 
@@ -105,3 +105,23 @@ let buttonFridayOnOff = true;
 let buttonFriday = document.querySelector('#btn-friday');
 
 buttonFriday.addEventListener('click', changeTextFriday);
+
+// Exercise 6
+let listItens = document.querySelectorAll('.day');
+let textInDe = true;
+
+function increaseText(event) {
+  if (textInDe) {
+    event.target.style.fontSize = '25px';
+    event.target.style.fontWeight = '900';
+    return textInDe = false;
+  }
+  event.target.style.fontSize = '20px';
+  event.target.style.fontWeight = '400';
+  return textInDe = true;
+}
+
+for (let index = 0; index < listItens.length; index += 1) {
+  listItens[index].addEventListener('mouseenter', increaseText);
+  listItens[index].addEventListener('mouseout', increaseText);
+}
