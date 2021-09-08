@@ -38,8 +38,8 @@ createWeekDays();
 
 // exercise 2
 function createButtonHoliday() {
-  let button = document.querySelector('.buttons-container');
-  let createButton = document.createElement('input');
+  const button = document.querySelector('.buttons-container');
+  const createButton = document.createElement('input');
   createButton.type = 'button';
   createButton.value = 'Holidays';
   createButton.id = 'btn-holiday';
@@ -49,3 +49,26 @@ function createButtonHoliday() {
 
 createButtonHoliday();
 
+// Exercise 3
+function changeColorHolidays() {
+  
+  const holiday = document.querySelectorAll('.holiday');
+  if (buttonOnOff === true) {
+    for (index = 0; index < holiday.length; index += 1) {
+      holiday[index].style.backgroundColor = 'green';
+      holiday[index].style.color = 'white';  
+    }
+    return buttonOnOff = false;
+  } else {
+  for (index = 0; index < holiday.length; index += 1) {
+    holiday[index].style.backgroundColor = 'rgb(238,238,238)';
+    holiday[index].style.color = '#777';
+    }
+    return buttonOnOff = true;
+  }
+}
+
+let buttonOnOff = true;
+let buttonHoliday = document.querySelector('#btn-holiday');
+
+buttonHoliday.addEventListener('click', changeColorHolidays);
