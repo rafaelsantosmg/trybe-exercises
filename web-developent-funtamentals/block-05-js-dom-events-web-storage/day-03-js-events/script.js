@@ -16,8 +16,7 @@ createDaysOfTheWeek();
 // Exersise 1
 function createWeekDays() {
   const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
-  const holiday = [24, 25, 31];
-  const friday = [4, 11, 18 ,21];
+  
   let weekDays = document.querySelector('#days');
 
   for (let index = 0; index < dezDaysList.length; index += 1) {
@@ -27,7 +26,7 @@ function createWeekDays() {
     if (dezDaysList[index] === 24 || dezDaysList[index] === 25 || dezDaysList[index] === 31) {
       dayListItem.classList.add('holiday');
     }
-    if (dezDaysList[index] === 4 || dezDaysList[index] === 11 || dezDaysList[index] === 18 || dezDaysList[index] === 21) {
+    if (dezDaysList[index] === 4 || dezDaysList[index] === 11 || dezDaysList[index] === 18 || dezDaysList[index] === 25) {
       dayListItem.classList.add('friday');
     }
     weekDays.appendChild(dayListItem);
@@ -53,21 +52,21 @@ createButtonHoliday('Feriados');
 function changeColorHolidays() {
   
   const holiday = document.querySelectorAll('.holiday');
-  if (buttonOnOff === true) {
+  if (buttonHolidayOnOff === true) {
     for (index = 0; index < holiday.length; index += 1) {
       holiday[index].style.backgroundColor = 'white';
     }
-    return buttonOnOff = false;
+    return buttonHolidayOnOff = false;
   } else {
   for (index = 0; index < holiday.length; index += 1) {
     holiday[index].style.backgroundColor = 'rgb(238,238,238)';
     holiday[index].style.color = '#777';
     }
-    return buttonOnOff = true;
+    return buttonHolidayOnOff = true;
   }
 }
 
-let buttonOnOff = true;
+let buttonHolidayOnOff = true;
 let buttonHoliday = document.querySelector('#btn-holiday');
 
 buttonHoliday.addEventListener('click', changeColorHolidays);
@@ -85,3 +84,24 @@ function createButtonFriday(string) {
 
 createButtonFriday('Sexta-feira');
 
+// Exercise 5
+function changeTextFriday() {
+  const fridays = [4, 11, 18 ,25];
+  const friday = document.querySelectorAll('.friday');
+  if (buttonFridayOnOff === true) {
+    for (index = 0; index < friday.length; index += 1) {
+      friday[index].innerHTML = 'Happy hour';
+    }
+    return buttonFridayOnOff = false;
+  } else {
+  for (index = 0; index < fridays.length; index += 1) {
+    friday[index].innerHTML = fridays[index];
+    }
+    return buttonFridayOnOff = true;
+  }
+}
+
+let buttonFridayOnOff = true;
+let buttonFriday = document.querySelector('#btn-friday');
+
+buttonFriday.addEventListener('click', changeTextFriday);
