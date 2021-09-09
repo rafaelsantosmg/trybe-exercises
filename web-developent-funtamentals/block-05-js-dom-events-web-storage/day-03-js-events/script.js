@@ -1,4 +1,5 @@
 let = colorDay = '';
+let buttonHolidayOnOff = true;
 
 function createDaysOfTheWeek() {
   const weekDays = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado']
@@ -51,27 +52,24 @@ function createButtonHoliday(string) {
 createButtonHoliday('Feriados');
 
 // Exercise 3
-function changeColorHolidays() {
+
+const buttonHoliday = document.querySelector('#btn-holiday');
+
+buttonHoliday.addEventListener('click', function () {
 
   const holiday = document.querySelectorAll('.holiday');
   if (buttonHolidayOnOff === true) {
     for (index = 0; index < holiday.length; index += 1) {
       holiday[index].style.backgroundColor = 'white';
     }
-    buttonHolidayOnOff = false;
-  } else {
-    for (index = 0; index < holiday.length; index += 1) {
-      holiday[index].style.backgroundColor = 'rgb(238,238,238)';
-      holiday[index].style.color = '#777';
-    }
-    buttonHolidayOnOff = true;
+    return buttonHolidayOnOff = false;
   }
-}
-
-let buttonHolidayOnOff = true;
-const buttonHoliday = document.querySelector('#btn-holiday');
-
-buttonHoliday.addEventListener('click', changeColorHolidays);
+  for (index = 0; index < holiday.length; index += 1) {
+    holiday[index].style.backgroundColor = 'rgb(238,238,238)';
+    holiday[index].style.color = '#777';
+  }
+  return buttonHolidayOnOff = true;
+});
 
 // Exercise 4
 function createButtonFriday(string) {
@@ -178,3 +176,20 @@ function changeColorDays(event) {
 for (let index = 0; index < colorItensDay.length; index += 1) {
   colorItensDay[index].addEventListener('click', changeColorDays);
 }
+
+// Bônus
+/**  Vamos adicionar compromissos ao seu calendário? Implemente uma função que, ao digitar um compromisso na caixa de texto "COMPROMISSOS", adiciona o item à lista "MEUS COMPROMISSOS" ao clicar no botão "ADICIONAR".
+
+    Se nenhum caractere for inserido no campo input , a função deve retornar um alert com uma mensagem de erro ao clicar em "ADICIONAR".
+    Ao pressionar a tecla "enter" o evento também deverá ser disparado.  */
+const buttonAdd = document.getElementById('btn-add');
+
+buttonAdd.addEventListener('click', function() {
+  const receiveText = document.querySelector('#task-input');
+  const createListTask = document.querySelector('.task-list');
+  let createList = document.createElement('li');
+  createList.innerHTML = receiveText.value;
+  createListTask.appendChild(createList);
+  receiveText.value = '';
+});
+
