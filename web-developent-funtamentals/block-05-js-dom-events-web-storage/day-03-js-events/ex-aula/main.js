@@ -38,13 +38,13 @@ myWebpage.addEventListener('dblclick', function() {
 // 5. Crie uma função que, ao passar o mouse sobre 'Meu top 3 do Spotrybefy', altere
 // a cor do mesmo;
 
-myWebpage.addEventListener('mouseenter', function (event) {
-  event.target.style.color = 'yellow';
-  event.target.style.cursor = 'pointer';
-});
-
-myWebpage.addEventListener('mouseout', function (event) {
-  event.target.style.color = 'unset';
+myWebpage.addEventListener('mouseenter mouseout', function (event) {
+  if (event.type === 'mouseenter') {
+    event.target.style.color = 'red';
+    event.target.style.cursor = 'pointer';
+  } else if (event.type === 'mouseout') {
+    event.target.style.color = 'unset';
+  }
 });
 
 // Segue abaixo um exemplo do uso de event.target:

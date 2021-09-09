@@ -41,9 +41,8 @@ createWeekDays();
 // exercise 2
 function createButtonHoliday(string) {
   const button = document.querySelector('.buttons-container');
-  const createButton = document.createElement('input');
-  createButton.type = 'button';
-  createButton.value = string;
+  const createButton = document.createElement('button');
+  createButton.innerHTML = string;
   createButton.id = 'btn-holiday';
 
   button.appendChild(createButton);
@@ -55,10 +54,8 @@ createButtonHoliday('Feriados');
 
 const buttonHoliday = document.querySelector('#btn-holiday');
 
-buttonHoliday.addEventListener('click', function () {
-
-  const holiday = document.querySelectorAll('.holiday');
-  if (buttonHolidayOnOff === true) {
+buttonHoliday.addEventListener('click', function (event) {
+  if (colorHoliday === 'rgb(238,238,238)') {
     for (index = 0; index < holiday.length; index += 1) {
       holiday[index].style.backgroundColor = 'white';
     }
