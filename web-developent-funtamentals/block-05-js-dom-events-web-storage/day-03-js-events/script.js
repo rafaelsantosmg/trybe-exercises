@@ -1,5 +1,5 @@
 let = colorDay = '';
-let buttonHolidayOnOff = true;
+
 
 function createDaysOfTheWeek() {
   const weekDays = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado']
@@ -51,29 +51,24 @@ function createButtonHoliday(string) {
 createButtonHoliday('Feriados');
 
 // Exercise 3
-
 const buttonHoliday = document.querySelector('#btn-holiday');
 
-buttonHoliday.addEventListener('click', function (event) {
-  if (colorHoliday === 'rgb(238,238,238)') {
-    for (index = 0; index < holiday.length; index += 1) {
+buttonHoliday.addEventListener('click', function () {
+  const holiday = document.querySelectorAll('.holiday');
+  for (index = 0; index < holiday.length; index += 1) {
+    if (holiday[index].style.backgroundColor === 'white') {
+      holiday[index].style.backgroundColor = 'unset';
+    } else {
       holiday[index].style.backgroundColor = 'white';
     }
-    return buttonHolidayOnOff = false;
   }
-  for (index = 0; index < holiday.length; index += 1) {
-    holiday[index].style.backgroundColor = 'rgb(238,238,238)';
-    holiday[index].style.color = '#777';
-  }
-  return buttonHolidayOnOff = true;
 });
 
 // Exercise 4
 function createButtonFriday(string) {
   const button = document.querySelector('.buttons-container');
-  const createButton = document.createElement('input');
-  createButton.type = 'button';
-  createButton.value = string;
+  const createButton = document.createElement('button');
+  createButton.innerHTML = string;
   createButton.id = 'btn-friday';
 
   button.appendChild(createButton);
@@ -82,44 +77,33 @@ function createButtonFriday(string) {
 createButtonFriday('Sexta-feira');
 
 // Exercise 5
-function changeTextFriday() {
+const buttonFriday = document.querySelector('#btn-friday');
+buttonFriday.addEventListener('click', function () {
   const fridays = [4, 11, 18, 25];
   const friday = document.querySelectorAll('.friday');
-  if (buttonFridayOnOff) {
-    for (index = 0; index < friday.length; index += 1) {
+  for (index = 0; index < friday.length; index += 1) {
+    if (friday[index].innerHTML === 'Happy hour') {
+      friday[index].innerHTML = fridays[index];
+    } else {
       friday[index].innerHTML = 'Happy hour';
     }
-    return buttonFridayOnOff = false;
   }
-  for (index = 0; index < fridays.length; index += 1) {
-    friday[index].innerHTML = fridays[index];
-  }
-  return buttonFridayOnOff = true;
-}
-
-let buttonFridayOnOff = true;
-const buttonFriday = document.querySelector('#btn-friday');
-
-buttonFriday.addEventListener('click', changeTextFriday);
+});
 
 // Exercise 6
-const listItens = document.querySelectorAll('.day');
-let textInDe = true;
+const days = document.querySelectorAll('.day');
+for (let index = 0; index < days.length; index += 1) {
+  days[index].addEventListener('mouseover', function() {
+    const days = document.querySelectorAll('.day');
+    days[index].style.fontSize = '30px';
+    days[index].fontWeight = '600';
+  });
 
-function increaseText(event) {
-  if (textInDe) {
-    event.target.style.fontSize = '25px';
-    event.target.style.fontWeight = '900';
-    return textInDe = false;
-  }
-  event.target.style.fontSize = '20px';
-  event.target.style.fontWeight = '400';
-  return textInDe = true;
-}
-
-for (let index = 0; index < listItens.length; index += 1) {
-  listItens[index].addEventListener('mouseenter', increaseText);
-  listItens[index].addEventListener('mouseout', increaseText);
+  days[index].addEventListener('mouseout', function() {
+    const days = document.querySelectorAll('.day');
+    days[index].style.fontSize = '20px';
+    days[index].fontWeight = '200';
+  });
 }
 
 // Exercise 7
@@ -181,7 +165,7 @@ for (let index = 0; index < colorItensDay.length; index += 1) {
     Ao pressionar a tecla "enter" o evento também deverá ser disparado.  */
 const buttonAdd = document.getElementById('btn-add');
 
-buttonAdd.addEventListener('click', function() {
+buttonAdd.addEventListener('click', function () {
   const receiveText = document.querySelector('#task-input');
   const createListTask = document.querySelector('.task-list');
   let createList = document.createElement('li');
