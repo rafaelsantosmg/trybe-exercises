@@ -11,8 +11,8 @@ function createDaysOfTheWeek() {
     dayListItem.innerHTML = days;
 
     weekDaysList.appendChild(dayListItem);
-  };
-};
+  }
+}
 
 createDaysOfTheWeek();
 
@@ -93,16 +93,12 @@ buttonFriday.addEventListener('click', function () {
 // Exercise 6
 const days = document.querySelectorAll('.day');
 for (let index = 0; index < days.length; index += 1) {
-  days[index].addEventListener('mouseover', function() {
-    const days = document.querySelectorAll('.day');
-    days[index].style.fontSize = '30px';
-    days[index].fontWeight = '600';
+  days[index].addEventListener('click', function() {
+    days[index].style.backgroundColor = 'green';
   });
 
-  days[index].addEventListener('mouseout', function() {
-    const days = document.querySelectorAll('.day');
-    days[index].style.fontSize = '20px';
-    days[index].fontWeight = '200';
+  days[index].addEventListener('dblclick', function() {
+    days[index].style.backgroundColor = 'unset';
   });
 }
 
