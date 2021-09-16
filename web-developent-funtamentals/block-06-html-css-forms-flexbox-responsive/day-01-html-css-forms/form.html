@@ -16,63 +16,52 @@
   <main id="main">
     <form action="" method="GET" id="formulario">
       <fieldset class="fieldset">
-        <div class="data-personal">
-          <h2>Dados Pessoais</h2>
-          <div class="container-block">
-            <label for="name">Nome</label>
-            <input type="text" name="name" id="name" maxlength="40" required>
-          </div>
-          <div class="container-block">
-            <label for="email">e-mail</label>
-            <input type="email" name="email" id="email" maxlength="50" required>
-          </div>
-          <div class="container-block">
-            <label for="cpf">CPF</label>
-            <input type="text" name="cpf" id="cpf" maxlength="11" required>
-          </div>
-          <div class="container-block">
-            <label for="endereco">Endereço</label>
-            <input type="text" name="end" id="endereco" maxlength="200" required>
-          </div>
-          <div class="container-block">
-            <label for="cidade">Cidade</label>
-            <input type="text" name="cid" id="cidade" maxlength="28" required>
-          </div>
-          <div class="container-block">
-            <label for="">Estado</label>
-            <select name="estado" id="estados" required>
-            </select>
-          </div>
-          <div class="container-block">
-            <input type="radio" name="tipo" id="casa" value="Casa" required>
-            <label for="casa">Casa</label>
-            <input type="radio" name="tipo" id="apartamento" value="Apartamento" required>
-            <label for="apartamento">Apartamento</label>
-          </div>
+        <h2>Dados Pessoais</h2>
+        <div id="personal">
+          <label for="name">Nome:</label>
+          <input type="text" name="nome" id="name" maxlength="40" required>
+
+          <label for="email">e-mail:</label>
+          <input type="email" name="email" id="email" maxlength="50" required>
+
+          <label for="cpf">CPF:</label>
+          <input type="text" name="cpf" id="cpf" maxlength="11" required>
+
+          <label for="endereco">Endereço:</label>
+          <input type="text" name="end" id="endereco" maxlength="200" required>
+
+          <label for="cidade">Cidade:</label>
+          <input type="text" name="cid" id="cidade" maxlength="28" required>
+
+          <label for="estados">Estado:</label>
+          <select name="estado" id="estados" required></select>
+
+          <input type="radio" name="tipo" id="casa" value="Casa" required>
+          <label for="casa">Casa:</label>
+
+          <input type="radio" name="tipo" id="apartamento" value="Apartamento" required>
+          <label for="apartamento">Apartamento:</label>
         </div>
       </fieldset>
+
       <fieldset class="fieldset">
-        <div class="last-job">
-          <h2>Ultimo trabalho</h2>
-          <div class="container-block">
-            <label for="resumo">Resumo do currículo</label>
-            <textarea name="resumo" id="resumo" cols="30" rows="15" maxlength="1000" required></textarea>
-          </div>
-          <div class="container-block">
-            <label for="cargo">Cargo</label>
-            <input type="text" name="cargo" id="cargo" maxlength="40" required>
-          </div>
-          <div class="container-block">
-            <label for="desc-cargo">Descrição do Cargo</label>
-            <input type="text" name="desccargo" id="desc-cargo" maxlength="500" required>
-          </div>
-          <div class="container-block">
-            <label for="data-ini">Data de inicio</label>
-            <input type="text" name="data" id="data-ini" required>
-          </div>
+        <h2>Ultimo trabalho</h2>
+        <div id="lastjob">
+          <label for="resumo">Resumo do currículo</label>
+          <textarea name="resumo" id="resumo" cols="30" rows="15" maxlength="1000" required></textarea>
+
+          <label for="cargo">Cargo</label>
+          <input type="text" name="cargo" id="cargo" maxlength="40" required>
+
+          <label for="desc-cargo">Descrição do Cargo</label>
+          <input type="text" name="desccargo" id="desc-cargo" maxlength="500" required>
+
+          <label for="data-ini">Data de inicio</label>
+          <input type="text" name="data" id="data-ini" required>
         </div>
       </fieldset>
       <button type="submit" id="enviar">Enviar</button>
+      <button type="submit" id="limpar">Limpar Formulário</button>
     </form>
   </main>
   <script src="script.js"></script>

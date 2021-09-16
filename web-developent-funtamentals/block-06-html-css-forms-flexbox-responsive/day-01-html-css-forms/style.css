@@ -31,15 +31,19 @@ form {
   background-color: #c5c5c5;
   margin: 40px 0px;
   padding: 10px;
+  padding-right: 20px;
   border: 1px solid black;
   border-radius: 5px;
+  line-height: 2em;
 }
 
 select {
   font-size: 10pt;
+  width: 100%;
 }
 
 label {
+  width: 100%;
   font-size: 12pt;
   font-weight: 600;
 }
@@ -47,19 +51,19 @@ label {
 input {
   font-size: 10pt;
   padding: 2px;
+  width: 100%;
 }
 
 input[type='text'] , input[type='email'] {
   border-radius: 3px;
-  width: 100%;
+}
+
+input[type='radio'] {
+  width: 10%;
 }
 
 textarea {
   width: 100%;
-}
-
-.container-block {
-  margin: 20px;
 }
 
 button {
