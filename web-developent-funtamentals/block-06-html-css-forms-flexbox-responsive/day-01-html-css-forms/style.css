@@ -36,16 +36,16 @@ form {
 }
 
 select {
-  font-size: 12pt;
+  font-size: 10pt;
 }
 
 label {
-  font-size: 15pt;
+  font-size: 12pt;
   font-weight: 600;
 }
 
 input {
-  font-size: 12pt;
+  font-size: 10pt;
   padding: 2px;
 }
 
@@ -54,6 +54,16 @@ input[type='text'] , input[type='email'] {
   width: 100%;
 }
 
+textarea {
+  width: 100%;
+}
+
 .container-block {
   margin: 20px;
+}
+
+button {
+  padding: 5px 20px;
+  margin-bottom: 10px;
+  border-radius: 5px;
 }
