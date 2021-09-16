@@ -67,3 +67,15 @@ button {
   margin-bottom: 10px;
   border-radius: 5px;
 }
+
+.printuser {
+  width: 80%;
+  background-color: #c5c5c5;
+  margin: 40px auto;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  line-height: 2em;
+  color: black;
+  text-shadow: 2px 2px 3px white;
+}

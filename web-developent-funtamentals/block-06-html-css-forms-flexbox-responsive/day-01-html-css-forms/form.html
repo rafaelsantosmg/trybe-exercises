@@ -14,7 +14,7 @@
     <h1>Formulário para Currículo</h1>
   </header>
   <main id="main">
-    <form action="#">
+    <form action="" method="GET" id="formulario">
       <fieldset class="fieldset">
         <div class="data-personal">
           <h2>Dados Pessoais</h2>
@@ -44,9 +44,9 @@
             </select>
           </div>
           <div class="container-block">
-            <input type="radio" name="tipo" id="casa" required>
+            <input type="radio" name="tipo" id="casa" value="Casa" required>
             <label for="casa">Casa</label>
-            <input type="radio" name="tipo" id="apartamento" required>
+            <input type="radio" name="tipo" id="apartamento" value="Apartamento" required>
             <label for="apartamento">Apartamento</label>
           </div>
         </div>
@@ -68,7 +68,7 @@
           </div>
           <div class="container-block">
             <label for="data-ini">Data de inicio</label>
-            <input type="text" name="data" id="data-ini">
+            <input type="text" name="data" id="data-ini" required>
           </div>
         </div>
       </fieldset>
