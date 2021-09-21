@@ -11,18 +11,20 @@ body {
 
 .header-container {
   background-color: #5C687C;
+  justify-content: space-between;
   display: flex;
 }
 
 .logo-container {
   display: flex;
   justify-content: center;
-  flex: 268px;
+  flex-basis: 268px;
 }
 
 .menu-container {
   display: flex;
-  flex: 500px;
+  flex-basis: 500px;
+  order: 2;
 }
 
 .menu-container ul {
