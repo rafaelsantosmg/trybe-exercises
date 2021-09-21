@@ -22,6 +22,7 @@ body {
 }
 
 .menu-container {
+  align-self: center;
   display: flex;
   flex-basis: 500px;
   order: 2;
