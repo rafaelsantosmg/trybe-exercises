@@ -5,9 +5,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="bootstrap-5.1.1-dist/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="style.css">
-  <script src="bootstrap-5.1.1-dist/js/bootstrap.min.js"></script>
+  <link href="validation.min.css" rel="stylesheet">
+  <script src="validation.min.js"></script>
   <title>Formulário</title>
 </head>
 
@@ -16,13 +16,14 @@
     <h1>Formulário para Currículo</h1>
   </header>
   <main id="main">
-    <form action="" method="GET" id="formulario">
+    <form id="main-form">
       <fieldset class="fieldset">
         <h2>Dados Pessoais</h2>
         <div id="personal">
-          <label for="name">Nome:</label>
-          <input type="text" name="nome" id="name" maxlength="40" required>
-
+          <div>
+            <label for="name">Nome:</label>
+            <input class="validate" data-validade="required" type="text" name="nome" id="name" maxlength="40">
+          </div>
           <label for="email">e-mail:</label>
           <input type="email" name="email" id="email" maxlength="50" required>
 
@@ -67,7 +68,6 @@
     </form>
   </main>
 
-  <script src="./path/to/just-validate.min.js"></script>
   <script src="script.js"></script>
 </body>
 
