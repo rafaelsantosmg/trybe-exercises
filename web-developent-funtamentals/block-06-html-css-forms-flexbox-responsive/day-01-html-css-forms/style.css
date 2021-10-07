@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: white;
+}
+
+body {
+  background-color: #928f8f;
+  width: 60%;
+  margin: 20px auto;
+  border: 2px solid #fdfdfd;
+  border-radius: 20px;
+}
+
+header{
+  margin-top: 40px;
+}
+
+header h1 {
+  text-align: center;
+}
+
+form {
+  margin: 0px 50px;
+}
+
+.fieldset {
+  background-color: #c5c5c5;
+  margin: 40px 0px;
+  padding: 10px;
+  padding-right: 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+  line-height: 2em;
+}
+
+select {
+  font-size: 10pt;
+  width: 100%;
+}
+
+label {
+  width: 100%;
+  font-size: 12pt;
+  font-weight: 600;
+}
+
+input {
+  font-size: 10pt;
+  padding: 2px;
+  width: 100%;
+}
+
+input[type='text'] , input[type='email'] {
+  border-radius: 3px;
+}
+
+input[type='radio'] {
+  width: 10%;
+}
+
+textarea {
+  width: 100%;
+}
+
+button {
+  padding: 5px 20px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.printuser {
+  width: 80%;
+  background-color: #c5c5c5;
+  margin: 40px auto;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  line-height: 2em;
+  color: black;
+  text-shadow: 2px 2px 3px white;
+}
