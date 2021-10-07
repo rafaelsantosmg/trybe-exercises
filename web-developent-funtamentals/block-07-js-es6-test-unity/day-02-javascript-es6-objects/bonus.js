@@ -18,15 +18,16 @@ const lesson3 = {
   turno: 'noite',
 };
 
-const allLessons = Object.assign({}, { lesson1, lesson2, lesson3 });
-console.log(allLessons);
+const allLessons = Object.assign({}, {lesson1, lesson2, lesson3});
 
-const getNumberOfStudents = (obj) => {
-  let total = 0;
-  const array = Object.keys(obj);
-  for (index in array) {
-    total += obj[array[index]].numeroEstudantes;
+const countStudent = (obj, math) => {
+  let tot = 0;
+  for (key in obj) {
+    if (obj[key].materia === math) {
+      tot += obj[key].numeroEstudantes;
+    }
   }
+
   return total;
 };
 console.log(getNumberOfStudents(allLessons));
@@ -40,7 +41,8 @@ const countStudent = (obj, math) => {
       tot += obj[key].numeroEstudantes;
     }
   }
+
   return tot;
 } 
 
-console.log(countStudent(allLessons, 'Matemática'))
+console.log(countStudent(allLessons, 'Matemática'));

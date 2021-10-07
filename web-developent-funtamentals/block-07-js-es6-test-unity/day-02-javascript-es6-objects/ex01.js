@@ -56,3 +56,10 @@ const orderModifier = (order) => {
 }
 
 orderModifier(order);
+
+const objectArray = Object.entries(order);
+
+objectArray.forEach(([key, value]) => {
+  console.log(key);
+  console.log(value);
+});
