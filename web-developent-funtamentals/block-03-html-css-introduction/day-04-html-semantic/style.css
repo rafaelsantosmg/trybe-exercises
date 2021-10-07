@@ -1,0 +1,173 @@
+/* Estilos CSS */
+
+.color1 {color: #2d2047;}
+.color2 {color: #533449;}
+.color3 {color: #a28e88;}
+.color4 {color: #d8d2c5;}
+.color5 {color: #f5f4f2;}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #d8d2c5;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 30pt;
+  text-align: center;
+}
+
+h2 {
+  font-weight: 900;
+  font-size: 25pt;
+  text-align: center;
+  margin: 40px;
+}
+
+h3 {
+  font-weight: 900;
+  font-size: 20pt;
+  text-align: center;
+  margin: 50px auto;
+}
+
+.menu {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  background-color: #2d2047;
+}
+
+.menu li {
+  margin-left: 50px;
+  display: inline-block;
+  color: #f5f4f2;
+}
+
+.header h1 {
+  padding-top: 10%;
+}
+
+.main-content {
+  margin: 20px;
+  border: 3px double #533449;
+  padding: 0 10px;
+  padding-bottom: 30px;
+}
+
+.table {
+  width: 80%;
+  margin: auto;
+  border: 2px double #2d2047;
+}
+
+.table td {
+  background-color: #533449;
+  color: #f5f4f2;
+  text-align: left;
+}
+
+.article {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 12pt;
+  line-height: 20px;
+}
+
+.images {
+  display: inline-block;
+  width: 40%;
+  border: 2px solid #533449;
+  border-radius: 50%;
+  box-shadow: 3px 3px 5px #2d2047;
+}
+
+.images:hover {
+  border-radius: 5%;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+.facts {
+  text-align: center;
+}
+
+.facts-content {
+
+}
+
+.facts-content p {
+  width: 50%;
+  float: right;
+  text-indent: 15px;
+  text-align: justify;
+  margin: 20px auto;
+}
+
+.footer {
+  text-align: center;
+  padding: 10px;
+  margin: auto;
+  border-top: 2px dotted #2d2047;
+
+}
+
+@media (max-width:700px) {
+  .main-content {
+    width: 90%;
+    margin: auto;
+  }
+
+  h2 {
+    width: 80%;
+    padding: inherit;
+    margin: 30px auto;
+    text-align: center;
+    font-size: 35px;
+    line-height: 25pt;
+  }
+
+  h3 {
+    width: 80%;
+    font-size: 20pt;
+  }
+
+  .images {
+    display: inline-block;
+    width: 100%;
+    border: 2px solid #533449;
+    border-radius: 50%;
+    box-shadow: 3px 3px 5px #2d2047;
+  }
+  
+  .images:hover {
+    border-radius: 5%;
+    transition: all 0.5s ease-in-out 0s;
+  }
+  
+  .facts {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .facts p {
+    width: 100%;
+    display: inline-block;
+    text-indent: 15px;
+    text-align: justify;
+    font-size: 15pt;
+    line-height: 20pt;
+    margin: 20px auto;
+  }
+
+  .table {
+    width: 100%;
+  }
+}
