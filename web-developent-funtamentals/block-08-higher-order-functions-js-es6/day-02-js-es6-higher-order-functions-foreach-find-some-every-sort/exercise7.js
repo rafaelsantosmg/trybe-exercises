@@ -68,8 +68,9 @@ const expectedResult = false;
 
 function authorUnique() {
   // escreva seu código aqui
-  const birthYear = books.sort((birthYearA, birthYearB) => birthYearA.author.birthYear - birthYearB.author.birthYear);
-  console.log(birthYear);
+  return books.every((bookEvery) => (
+    !books.some((bookSome) => bookEvery.author.birthYear === bookSome.author.birthYear && bookEvery.author.name !== bookSome.author.name) 
+  ));
 }
-authorUnique();
-// assert.strictEqual(authorUnique(), expectedResult);
+
+assert.strictEqual(authorUnique(), expectedResult);
