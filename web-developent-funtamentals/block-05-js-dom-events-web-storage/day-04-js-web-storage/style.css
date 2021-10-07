@@ -1,0 +1,20 @@
+body {
+  background-color: antiquewhite;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 20pt;
+}
+
+.title h1 {
+  font-size: 60pt;
+  text-align: center;
+}
+
+.title p {}
+
+.main-content {
+  margin: auto;
+  max-width: 90%;
+}
+
+.content {}
