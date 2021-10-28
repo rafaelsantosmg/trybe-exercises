@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header, .footer {
+  background-color: green;
+  width: 100%;
+}
+
+.title {
+  text-align: center;
+  color:white;
+  padding: 10px;
+}
+
+.list {
+  display: flex;
+  margin: 10px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-around;
+  height: 390px;
+  align-items: center;
+}
+
+.card {
+  align-items: center;
+  width: 20%;
+  border: 1px solid black;
+  margin: 5px;
+  padding: 10px;
+}
+
+.footer h1 {
+  text-align: center;
+  color: white;
+  padding: 10px;
+}
