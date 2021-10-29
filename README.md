@@ -6,7 +6,7 @@ _"A Trybe é uma escola do futuro para qualquer pessoa que queira melhorar de vi
 
 O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda introdução ao desenvolvimento de software, front-end, back-end, ciência da computação, engenharia de software, metodologias ágeis e habilidades comportamentais.
 
-## Fundamentos do Desenvolvimento Web :white_check_mark:
+## Fundamentos do Desenvolvimento Web :white_check_mark:## Fundamentos do Desenvolvimento Web :white_check_mark:
 
 ##### Bloco 1: Introdução - Unix & Shell
 
@@ -33,7 +33,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [x] 4-3: _JavaScript - Lógica de Programação e Algoritmos_
 - [x] 4-4: _JavaScript - Objetos e funções_
 
-##### Bloco 5: Introdução - JavaScript
+##### Bloco 5: Introdução - JavaScript - Projetos
 
 - [x] 5-1: _JavaScript - DOM e seletores_
 - [x] 5-2: _JavaScript - Trabalhando com elementos_
@@ -64,143 +64,173 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 ##### Bloco 9: Assincronicidade & Callbacks
 
 - [x] 9-1: _JavaScript Assíncrono e Callbacks_
-- [x] 9-2: _JavaScript Promises_
-
-##### Bloco 10: Jest
-
-- [ ] 10-1: _Primeiros passos no Jest_
-- [ ] 10-2: _Jest - Testes Assíncronos_
-- [ ] 10-3: _Jest - Simulando comportamentos_
+- [x] 9-2: _JavaScript Assíncrono - Fetch API e async/await_
+- [x] 9-3: _Jest - Testes Assíncronos_
 
 ## Desenvolvimento Front-end :hourglass_flowing_sand:
 
-##### Bloco 11: Introdução - React
+##### Bloco 10: Introdução - React
 
-- [ ] 11-1: _'Hello, world!' no React!_
-- [ ] 11-2: _Componentes React_
+- [x] 10-1: _'Hello, world!' no React!_
+- [x] 10-2: _Componentes React_
 
-##### Bloco 12: React
+##### Bloco 11: Componentes com Estado, Eventos e Formulários com React
 
-- [ ] 12-1: _Components com estado_
-- [ ] 12-2: _Eventos e formulários no React_
+- [ ] 11-1: _Components com estado e eventos_
+- [ ] 11-2: _Formulários no React_
 
-##### Bloco 13: React
+##### Bloco 12: Ciclo de Vida de Componentes e React Router
 
-- [ ] 13-1: _Melhorando o reuso de componentes: props.children e PropTypes_
-- [ ] 13-2: _Ciclo de vida de componentes em React_
-- [ ] 13-3: _React Router_
+- [ ] 12-1: _Ciclo de vida de componentes_
+- [ ] 12-2: _React Router_
 
-##### Bloco 14: Metodologias Ágeis
+##### Bloco 13: Metodologias Ágeis
 
-- [ ] 14-1: _Metodologias Ágeis_
+- [ ] 13-1: _Metodologias Ágeis_
 
-##### Bloco 15: Testes em React
+##### Bloco 14: Testes automatizados com React Testing Library
 
-- [ ] 15-1: _Testando React com a React Testing Library_
-- [ ] 15-2: _Testando React com a React Testing Library - Parte 2_
+- [ ] 14-1: _RTL - Primeiros passos_
+- [ ] 14-2: _RTL - Mocks e Inputs_
+- [ ] 14-3: _RTL - Testando Reac Router_
 
-##### Bloco 16: Introdução ao Redux
+##### Bloco 15: Gerenciamento de estado com Redux
 
-- [ ] 16-1: _Introdução ao Redux_
-- [ ] 16-2: _React com Redux - Parte 1_
-- [ ] 16-3: _React com Redux - Prática_
-- [ ] 16-4: _React com Redux - Parte 2_
-- [ ] 16-5: _Testes síncronos com React-Redux_
+- [ ] 15-1: _Introdução ao Redux - O estado global da aplicação_
+- [ ] 15-2: _Usando o Redux no React_
+- [ ] 15-3: _Usando o Redux no React - Prática_
+- [ ] 15-4: _Usando o Redux no React - Actions Assinconas_
+- [ ] 15-5: _Testes em React-Redux_
 
-##### Bloco 18: React & Context API
+##### Bloco 16: Projeto Jogo de Trivia
 
-- [ ] 18-1: _Context API do React_
-- [ ] 18-2: _React Hooks - useState e useContext_
-- [ ] 18-3: _React Hooks - useEffect e Hooks customizados_
+##### Bloco 17: Context API e React Hooks
+
+- [ ] 17-1: _Context API do React_
+- [ ] 17-2: _React Hooks - useState e useContext_
+- [ ] 17-3: _React Hooks - useEffect e Hooks customizados_
+
+##### Bloco 18: Projeto App de Receitas
 
 ## Desenvolvimento Back-end :hourglass_flowing_sand:
 
-##### Bloco 20: Introdução - Bancos de dados relacionais
+##### Bloco 19: Introdução à SQL
 
-- [ ] 20-1: _Banco de dados SQL_
-- [ ] 20-2: _Encontrando dados em um banco de dados_
-- [ ] 20-3: _Filtrando dados de forma específica_
-- [ ] 20-4: _Manipulando tabelas_
+- [ ] 19-1: _Banco de dados SQL_
+- [ ] 19-2: _Encontrando dados em um banco de dados_
+- [ ] 19-3: _Filtrando dados de forma específica_
+- [ ] 19-4: _Manipulando tabelas_
 
-##### Bloco 21: Bancos de dados relacionais
+##### Bloco 20: Funções SQL, Joins e Subqueries
 
-- [ ] 21-1: _Funções mais usadas no SQL_
-- [ ] 21-2: _Descomplicando JOINs e UNIONs_
-- [ ] 21-3: _Stored Routines & Subqueries_
+- [ ] 20-1: _Funções mais usadas no SQL_
+- [ ] 20-2: _Descomplicando JOINs, UNIONs e Subqueries_
+- [ ] 20-3: _Stored Routines & Subqueries_
 
-##### Bloco 22: Bancos de dados relacionais
+##### Bloco 21: Normalização e Modelagem de Banco de Dados
 
-- [ ] 22-1: _Transformando ideias em um modelo de banco de dados_
-- [ ] 22-2: _Normalização, Formas Normais e Dumps_
-- [ ] 22-2: _Transformando ideias em um modelo de banco de dados - Parte 2_
+- [ ] 21-1: _Transformando ideias em um modelo de banco de dados - Parte 1_
+- [ ] 21-2: _Normalização, Formas Normais e Dumps_
+- [ ] 21-3: _Transformando ideias em um modelo de banco de dados - Parte 2_
 
-##### Bloco 23: Introdução - NoSQL
+##### Bloco 22: Introdução ao MongoDB
 
-- [ ] 23-1: _MongoDB - Introdução_
-- [ ] 23-2: _Filter Operators_
+- [ ] 22-1: _MongoDB - Introdução_
+- [ ] 22-2: _Filter Operators_
 
-##### Bloco 24: Updates
+##### Bloco 23: MongoDB: Updates Simples e Complexos
 
-- [ ] 24-1: _Updates Simples_
-- [ ] 24-2: _Updates Complexos - Arrays - Parte 1_
-- [ ] 24-3: _Updates Complexos - Arrays - Parte 2_
+- [ ] 23-1: _Updates Simples_
+- [ ] 23-2: _Updates Complexos - Arrays - Parte 1_
+- [ ] 23-3: _Updates Complexos - Arrays - Parte 2_
 
-##### Bloco 25: Aggregation Framework
+##### Bloco 24: MongoDB: Aggregation Framework
 
-- [ ] 25-1: _Aggregation Framework - Part 1_
-- [ ] 25-2: _Aggregation Framework - Part 2_
+- [ ] 24-1: _Aggregation Framework - Part 1_
+- [ ] 24-2: _Aggregation Framework - Part 2_
 
-##### Bloco 26: Intro - NodeJS
+##### Bloco 25: Introdução ao desenvolvimento Web com NodeJS
 
-- [ ] 26-1: _NodeJS - Introdução_
-- [ ] 26-2: _NodeJS - Fluxo Assíncrono_
-- [ ] 26-3: _NodeJS - Arquitetura_
+- [ ] 25-1: _NodeJS - Introdução_
+- [ ] 25-2: _NodeJS - Fluxo Assíncrono_
+- [ ] 25-3: _Testes com NodeJs_
+- [ ] 25-4: _Express: HTTP com NodeJs_
+- [ ] 25-5: _Express: Middlewares_
 
-##### Bloco 27: NodeJS
+##### Bloco 26: NodeJS: Camada de Serviço e Arquitetura Rest e Restful
 
-- [ ] 27-1: _Express: HTTP com Node.js_
-- [ ] 27-2: _Arquitetura de Software - Introdução ao MVC_
+- [ ] 26-1: _Arquitetura de Software - Camada de Model_
+- [ ] 26-2: _Arquitetura de Software - Camada de Controller e Service_
+- [ ] 26-3: _Arquitetura Web - Rest e Restfull_
+- [ ] 26-4: _Arquitetura de Software - Testando as Camada_
 
-##### Bloco 28: NodeJS
+##### Bloco 27: Autenticação e Upload de Arquivos
 
-- [ ] 28-1: _Arquitetura de Software - Camada de Serviço_
-- [ ] 28-2: _Arquitetura web - Rest e Restful_
+- [ ] 27-1: _NodeJS - JWT - (JSON Web Token)_
+- [ ] 27-2: _NodeJS - Upload de arquivos com `multer`_
+- [ ] 27-3: _NodeJS - Testando APIs com testes de integração_
 
-##### Bloco 29: NodeJS
+##### Bloco 28: Deployment
 
-- [ ] 29-1: _NodeJS - JWT - (JSON Web Token)_
-- [ ] 29-2: _NodeJS - Upload de arquivos com Multer_
+- [ ] 28-1: _Infraestrutura - Deploy com Heroku_
+- [ ] 28-2: _Deploy - Gerenciadores de Processos_
 
-##### Bloco 30: Introdução - Deploy
+##### Bloco 29: Arquitetura: SOLID e ORM
 
-- [ ] 30-1: _Infraestrutura - Deploy com Heroku_
-- [ ] 30-2: _Deploy - Gerenciadores de Processos_
+- [ ] 29-1: _Arquitetura - Princípios SOLID_
+- [ ] 29-2: _ORM - Interface da aplicação com o banco de dados_
+- [ ] 29-3: _ORM - Associations_
 
-##### Bloco 32: Arquitetura de Software
+##### Bloco 30: Sockets
 
-- [ ] 32-1: _Arquitetura - Princípios SOLID_
-- [ ] 32-2: _ORM - Interface da aplicação com o banco de dados_
-- [ ] 32-3: _Arquitetura de Software - DDD_
-- [ ] 32-4: _Boas práticas na escrita de testes_
+- [ ] 30-1: _Arquitetura de Softwares- Camada de View_
+- [ ] 30-2: _Sockets - TCP/UDP & NET_
+- [ ] 30-3: _Sockets - Socket.io_
+- [ ] 30-4: _Sockets - Praticando Socket.io_
 
 ##### Bloco 33: Sockets
 
 - [ ] 30-1: _Sockets - TCP/UDP & NET_
 - [ ] 30-2: _Sockets - Socket.io_
 
-## Ciência da Computação :hourglass_flowing_sand:
+##### Bloco 31: Projeto - App de Delivery
 
-##### Bloco 35: Introdução - Ciência da Computação
+## Ciência da Computação ⏳
 
-- [ ] 35-1: _Arquitetura de Computadores_
-- [ ] 35-2: _Arquitetura de redes_
-- [ ] 35-3: _Redes de computadores, ferramentas e segurança_
+##### Bloco 32: Introdução à Python
 
-##### Bloco 36: Python
+- [ ] 32-1: Introdução e aprendendo Python
+- [ ] 32-2: Entrada e saída de dados
+- [ ] 32-3: Testes
 
-- [ ] 35-1: _Aprendendo Python_
-- [ ] 35-2: _Testes e Exceções_
-- [ ] 35-3: _Entrada e Saída de dados_
-- [ ] 36-4: _Entrada e Saída de dados_
+##### Bloco 33: Programação Orientada a Objetos e Padrões de Projeto
 
-# [...]
+- [ ] 33-1: Introdução à programação orientada a objetos
+- [ ] 33-2: Herança, Composição e Interfaces
+- [ ] 33-3: Padrões de projeto
+
+##### Bloco 34: Redes e Raspagem de Dados
+
+- [ ] 34-1: Arquitetura de redes
+- [ ] 34-2: Redes de computadores, ferramentas e segurança
+- [ ] 34-3: Raspagem de Dados
+
+##### Bloco 35: Algoritmos
+
+- [ ] 35-1: Complexidade de Algoritmos
+- [ ] 35-2: Recursividade e estratégias para solução de problemas
+- [ ] 35-3: Algoritmos de ordenação e busca
+
+##### Bloco 36: Estrutura de Dados 1 : Arrays, Hashmaps e Sets
+- [ ] 36-1: Arquitetura de computadores
+- [ ] 36-2: Arrays
+- [ ] 36-3: Hashmap e Dict
+- [ ] 36-4: Set
+
+##### Bloco 37: Estrutura de Dados 2: Listas, Filas e pilhas
+
+- [ ] 37-1: Nó e listas encadeadas
+- [ ] 37-2: Deque
+- [ ] 37-3: Pilhas
+
+[...]
