@@ -34,11 +34,17 @@
     </div>
     <script>
       import { createStore } from 'redux';
+
       const ESTADO_INICIAL = {
         colors: ['white', 'black', 'red', 'green', 'blue', 'yellow'],
         index: 0,
       };
-      const store = createStore();
+
+      const reducer = (state = ESTADO_INICIAL, action) => {
+        return state;
+      };
+
+      const store = createStore(reducer);
     </script>
   </body>
 </html>
