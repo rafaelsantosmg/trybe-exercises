@@ -1,10 +1,7 @@
-const Redux = require('redux');
-const store = Redux.createStore();
+import { createStore } from 'redux';
+// Importando o reducer combinado que fizemos logo acima
+import reducerCombinado from './reducers/index.js';
 
-const reducer = (state) => {
-  return state;
-};
+const store = createStore(reducerCombinado);
 
-const store = createStore(reducer);
-
-console.log(store);
+console.log(store.getState());
