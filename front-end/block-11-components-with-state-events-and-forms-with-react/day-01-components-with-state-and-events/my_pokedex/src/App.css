@@ -30,11 +30,12 @@ body {
   font-weight: 400;
 }
 
-.pokemon p {
+.pokemon p, p {
   font-size: 2em;
   margin: 10px;
   color: whitesmoke;
   text-shadow: 1px 1px 1px black;
+  text-align: center;
 }
 
 .pokemon img {

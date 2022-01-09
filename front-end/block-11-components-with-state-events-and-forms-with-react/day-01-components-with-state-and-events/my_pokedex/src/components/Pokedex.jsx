@@ -1,76 +1,101 @@
 import React, { Component } from 'react';
-import pokemons from '../data';
+import { connect } from 'react-redux';
+// import pokemons from '../data';
 import Pokemon from './Pokemon';
 import Button from './Button';
+import ThunkPokemonAction from '../store/actions/action';
 
 class Pokedex extends Component {
   constructor() {
     super();
-    this.getPokemons = this.getPokemons.bind(this)
-    this.getBtnProx = this.getBtnProx.bind(this)
-    this.hanglePokemon = this.hanglePokemon.bind(this)
-    this.getTypePokemons = this.getTypePokemons.bind(this)
     this.state = {
-      count: 0,
-      type: 'All',
+      index: 0,
+      type: 'All'
     };
+    this.handlePokemons = this.handlePokemons.bind(this);
+    this.proxPokemon = this.proxPokemon.bind(this);
+    this.getTypesPokemons = this.getTypesPokemons.bind(this);
+    this.handleTypePokemon = this.handleTypePokemon.bind(this);
   }
 
-  getPokemons(type) {
-    if (this.state.type === 'All') return pokemons.map((pokemon) => pokemon)
-    if (this.state.type === type) {
-      return pokemons.filter((pokemon) => pokemon.type === type ? pokemon : null)
+  componentDidMount() {
+    const { getStorePokemons } = this.props;
+    getStorePokemons();
+  }
+
+  handlePokemons() {
+    const { type } = this.state;
+    const { pokemons } = this.props;
+    if (type === 'All') {
+      return pokemons;
     }
+    return pokemons.filter((pokemon) => pokemon.type === type);
   }
 
-  getBtnProx() {
+  proxPokemon(pokemons) {
     this.setState((prevState) => ({
-      count: prevState.count < this.getPokemons(this.state.type).length - 1
-        ? prevState.count + 1 : prevState.count = 0,
+      index: prevState.index === pokemons.length - 1 ? 0 : prevState.index + 1,
     }));
   }
 
-  hanglePokemon(types) {
-    this.setState(({
-      type: types,
-      count: 0,
-    }));
+  handleTypePokemon(type) {
+    this.setState({ index: 0, type: type });
   }
 
-  getTypePokemons() {
-    return pokemons.reduce((acc, pokemon) => (
-      !acc.includes(pokemon.type) ? acc.concat(pokemon.type) : acc
-    ), [])
+  getTypesPokemons() {
+    const { pokemons } = this.props;
+    const types = pokemons.map((pokemon) => pokemon.type);
+    return types.filter((type, index) => types.indexOf(type) === index);
   }
 
   render() {
-    const buttons = this.getTypePokemons();
+    const types = this.getTypesPokemons();
+    const buttons = types;
+    const { index } = this.state;
+    const { loading, error } = this.props;
+    const getPokemon = this.handlePokemons();
     return (
-      <div className="pokedex">
-        <div className="pokemon-cards">
-          <Pokemon pokemon={this.getPokemons(this.state.type)[this.state.count]} />
-          <Button
-            classButton='btn-prox'
-            hanglePokemon={this.getBtnProx}
-            isDisabled={this.getPokemons(this.state.type).length === 1 ? true : false}
-          >
-            Próximo
-          </Button>
-        </div>
-        <div className="buttons-types">
-          {buttons.map((button) => (
-            <Button
-              key={button}
-              classButton={'btn-default'}
-              hanglePokemon={() => this.hanglePokemon(button)}
-            >
-              {button}
-            </Button>
-          ))}
-        </div>
+      <div className="container">
+        { loading ? (
+          <p>...Carregando</p>
+        ) : (
+          <div className="pokedex">
+            <div className="pokemon-cards">
+              <Pokemon pokemon={ getPokemon[index] } />
+              <Button
+                classButton='btn-prox'
+                handlePokemon={ () => this.proxPokemon(getPokemon) }
+              >
+                Próximo
+              </Button>
+            </div>
+            <div className="buttons-types">
+              { buttons.map((button) => (
+                <Button
+                  classButton='btn-default'
+                  key={ button }
+                  handlePokemon={ () => this.handleTypePokemon(button) }
+                >
+                  { button }
+                </Button>
+              )) }
+            </div>
+          </div>
+        ) }
+        { error.length > 0 && <p>HAHAHA! Os Pokemons estão dormindo!!!</p>}
       </div>
     );
   }
 }
 
-export default Pokedex;
+  const mapStateToProps = (state) => ({
+    pokemons: state.pokemon,
+    loading: state.loading,
+    error: state.error,
+  });
+
+  const mapDispatchToProps = (dispatch) => ({
+    getStorePokemons: () => dispatch(ThunkPokemonAction()),
+  });
+
+export default connect(mapStateToProps, mapDispatchToProps)(Pokedex);

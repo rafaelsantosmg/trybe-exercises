@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 
 class Button extends Component {
   render() {
-    const { children, classButton, hanglePokemon, isDisabled } = this.props;
+    const { children, classButton, handlePokemon, isDisabled } = this.props;
     return (
-      <button className={classButton} onClick={hanglePokemon} disabled={isDisabled}>
+      <button className={classButton} onClick={handlePokemon} disabled={isDisabled}>
         {children}
       </button>
     )
