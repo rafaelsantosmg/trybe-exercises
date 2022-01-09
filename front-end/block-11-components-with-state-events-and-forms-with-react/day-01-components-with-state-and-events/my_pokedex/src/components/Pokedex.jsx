@@ -1,21 +1,17 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-// import pokemons from '../data';
 import Pokemon from './Pokemon';
 import Button from './Button';
 import ThunkPokemonAction from '../store/actions/action';
+import { actionTypePokemons, actionIndexPokemon } from '../store/actions/actionPokedex';
 
 class Pokedex extends Component {
   constructor() {
     super();
-    this.state = {
-      index: 0,
-      type: 'All'
-    };
     this.handlePokemons = this.handlePokemons.bind(this);
     this.proxPokemon = this.proxPokemon.bind(this);
     this.getTypesPokemons = this.getTypesPokemons.bind(this);
-    this.handleTypePokemon = this.handleTypePokemon.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   componentDidMount() {
@@ -24,22 +20,22 @@ class Pokedex extends Component {
   }
 
   handlePokemons() {
-    const { type } = this.state;
-    const { pokemons } = this.props;
-    if (type === 'All') {
+    const { pokemons, typePokemon } = this.props;
+    if (typePokemon === 'All') {
       return pokemons;
     }
-    return pokemons.filter((pokemon) => pokemon.type === type);
+    return pokemons.filter((pokemon) => pokemon.type === typePokemon);
   }
 
   proxPokemon(pokemons) {
-    this.setState((prevState) => ({
-      index: prevState.index === pokemons.length - 1 ? 0 : prevState.index + 1,
-    }));
+    const { index, handleStoreIndex } = this.props;
+    handleStoreIndex(index, pokemons.length)
   }
 
-  handleTypePokemon(type) {
-    this.setState({ index: 0, type: type });
+  handleClick(type) {
+    const { handleStoreIndex, handleStoreType } = this.props;
+    handleStoreType(type);
+    handleStoreIndex(0)
   }
 
   getTypesPokemons() {
@@ -49,10 +45,10 @@ class Pokedex extends Component {
   }
 
   render() {
-    const types = this.getTypesPokemons();
+    const types = ['All', ...this.getTypesPokemons()];
     const buttons = types;
-    const { index } = this.state;
-    const { loading, error } = this.props;
+    const { loading, error, index } = this.props;
+    console.log(index);
     const getPokemon = this.handlePokemons();
     return (
       <div className="container">
@@ -74,7 +70,7 @@ class Pokedex extends Component {
                 <Button
                   classButton='btn-default'
                   key={ button }
-                  handlePokemon={ () => this.handleTypePokemon(button) }
+                  handlePokemon={ () => this.handleClick(button) }
                 >
                   { button }
                 </Button>
@@ -89,13 +85,18 @@ class Pokedex extends Component {
 }
 
   const mapStateToProps = (state) => ({
-    pokemons: state.pokemon,
-    loading: state.loading,
-    error: state.error,
+    pokemons: state.reducer.pokemon,
+    loading: state.reducer.loading,
+    error: state.reducer.error,
+    index: state.reducerPokedex.index,
+    typePokemon: state.reducerPokedex.typePokemon,
   });
 
   const mapDispatchToProps = (dispatch) => ({
     getStorePokemons: () => dispatch(ThunkPokemonAction()),
+    handleStoreIndex: (index, length) => 
+      dispatch(actionIndexPokemon(index, length)),
+    handleStoreType: (type) => dispatch(actionTypePokemons(type)),
   });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Pokedex);
