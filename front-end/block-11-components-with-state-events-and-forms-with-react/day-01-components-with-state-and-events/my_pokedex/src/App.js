@@ -1,17 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
-import Pokedex from './components/Pokedex';
+import PokedexContext from './context/PokedexContext';
 import Header from './components/Header';
+import Pokedex from './components/Pokedex';
 
-class App extends Component {
-  render() {
-    return (
-      <>
-        <Header />
+export default function App() {
+  return (
+    <>
+      <Header />
+      <PokedexContext>
         <Pokedex />
-      </>
-    );
-  }
+      </PokedexContext>
+    </>
+  );
 }
-
-export default App;
