@@ -1,0 +1,24 @@
+.dota__card-item img {
+  width: 100%;
+}
+
+.dota__content-card {
+  background-color: rgba(46, 41, 41, 0.507);
+  border-radius: 8px;
+  color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  height: 350px;
+  margin: 7px;
+  text-align: center;
+  width: 300px;
+}
+
+.dota__content-info {
+  margin-top: 30px;
+}
+
+.dota__content-info p { 
+  word-break: break-all;
+  margin: 3px 15px;
+}

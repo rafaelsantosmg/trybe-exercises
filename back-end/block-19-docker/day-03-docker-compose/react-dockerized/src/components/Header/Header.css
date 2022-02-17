@@ -1,0 +1,15 @@
+.dota__header {
+  align-items: center;
+  background-color: rgba(51, 51, 51, 0.562);
+  color: whitesmoke;
+  display: flex;
+  height: 80px;
+  justify-content: center;
+  top: 0;
+  padding: 5px;
+  position: sticky;
+}
+
+.dota__header h1 {
+  margin-left: 3rem;
+}
