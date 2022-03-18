@@ -1,0 +1,25 @@
+{
+  "name": "exercicio22_5",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon --ignore simpsons.json index.js",
+    "test": "mocha --file ./tests/setup.js ./tests/**/*$NAME*.test.js --exit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "body-parser": "^1.19.1",
+    "chai": "^4.3.4",
+    "express": "^4.17.3",
+    "mocha": "^9.1.3",
+    "sinon": "^12.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
